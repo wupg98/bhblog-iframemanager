@@ -114,7 +114,7 @@ im.run({
         twitter : {
 
             onAccept: async (div, setIframe) => {
-                await loadScript('https://platform.twitter.com/widgets.js');
+                await loadScript('https://platform.x.com/widgets.js');
                 await im.childExists({childProperty: 'twttr'});
                 const tweet = await twttr.widgets.createTweet(div.dataset.id, div.firstElementChild);
                 tweet && setIframe(tweet.firstChild);
@@ -128,7 +128,7 @@ im.run({
 
             languages : {
                 en : {
-                    notice: 'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer noopener" href="https://www.youtube.com/t/terms" target="_blank">terms and conditions</a> of twitter.com.',
+                    notice: 'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer noopener" href="https://www.x.com/tos" target="_blank">terms and conditions</a> of x.com.',
                     loadBtn: 'Load once',
                     loadAllBtn: "Don't ask again"
                 }
@@ -219,7 +219,7 @@ im.run({
 
             languages : {
                 en : {
-                    notice: 'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer noopener" href="https://www.youtube.com/t/terms" target="_blank">terms and conditions</a> of twitter.com.',
+                    notice: 'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer noopener" href="https://www.youtube.com/t/terms" target="_blank">terms and conditions</a> of x.com.',
                     loadBtn: 'Load once',
                     loadAllBtn: "Don't ask again"
                 }
