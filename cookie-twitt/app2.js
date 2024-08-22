@@ -114,7 +114,7 @@ im.run({
         twitter : {
 
             onAccept: async (div, setIframe) => {
-                await loadScript('https://platform.x.com/widgets.js');
+                await loadScript('https://platform.twitter.com/widgets.js');
                 await im.childExists({childProperty: 'twttr'});
                 const tweet = await twttr.widgets.createTweet(div.dataset.id, div.firstElementChild);
                 tweet && setIframe(tweet.firstChild);
